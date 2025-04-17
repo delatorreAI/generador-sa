@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Iniciales - Generador SA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+    <div class="flex-grow container mx-auto p-4 md:p-8">
+        <header class="mb-8 text-center border-b pb-4 border-gray-300">
+            <h1 class="text-3xl font-bold text-blue-700">Generador de Situaciones de Aprendizaje</h1>
+        </header>
+
+        <main id="content" class="bg-white p-6 md:p-8 rounded-lg shadow-md max-w-4xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-600">Paso 1: Datos Iniciales</h2>
+            <p class="mb-6 text-gray-600">Define el curso, materia y contexto general de tu Situación de Aprendizaje.</p>
+
+            <form id="form-datos-iniciales">
+                <div class="space-y-4">
+                    <div>
+                        <label for="curso" class="block text-sm font-medium text-gray-700 mb-1">Curso / Nivel:</label>
+                        <input type="text" id="curso" name="curso" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Ej: 2º ESO">
+                    </div>
+                    <div>
+                        <label for="materia" class="block text-sm font-medium text-gray-700 mb-1">Materia / Área:</label>
+                        <input type="text" id="materia" name="materia" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Ej: Geografía e Historia">
+                    </div>
+                     <div>
+                        <label for="contexto" class="block text-sm font-medium text-gray-700 mb-1">Breve Contexto (Opcional):</label>
+                        <textarea id="contexto" name="contexto" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Describe brevemente el grupo clase o la situación de partida..."></textarea>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8 pt-6 border-t border-gray-200">
+                    <button id="btn-prev" type="button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        Anterior
+                    </button>
+                    <button id="btn-next" type="button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        Siguiente
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <footer class="mt-8 py-4 text-center text-gray-500 text-sm bg-gray-200">
+        © 2025 - Generador SA
+    </footer>
+
+    <script src="/js/navigation.js" defer></script>
+</body>
+</html>

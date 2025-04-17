@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competencias - Generador SA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+    <div class="flex-grow container mx-auto p-4 md:p-8">
+        <header class="mb-8 text-center border-b pb-4 border-gray-300">
+            <h1 class="text-3xl font-bold text-blue-700">Generador SA</h1>
+        </header>
+        <main id="content" class="bg-white p-6 md:p-8 rounded-lg shadow-md max-w-4xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-600">Paso 3: Competencias Clave y Específicas</h2>
+            <p class="mb-6 text-gray-600">Selecciona las competencias clave (CC) y las competencias específicas (CE) de la materia que se desarrollarán.</p>
+
+            <form id="form-competencias">
+                <div class="space-y-6">
+                    <div class="border border-gray-200 rounded p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-700">Competencias Clave (LOMLOE)</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                               <input id="cc-ccl" name="competencia_clave" value="CCL" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-ccl" class="ml-2 block text-sm text-gray-900">CCL - Competencia en comunicación lingüística</label>
+                            </div>
+                            <div class="flex items-center">
+                               <input id="cc-cp" name="competencia_clave" value="CP" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-cp" class="ml-2 block text-sm text-gray-900">CP - Competencia plurilingüe</label>
+                            </div>
+                            <div class="flex items-center">
+                               <input id="cc-stem" name="competencia_clave" value="STEM" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-stem" class="ml-2 block text-sm text-gray-900">STEM - Competencia matemática y competencia en ciencia, tecnología e ingeniería</label>
+                            </div>
+                            <div class="flex items-center">
+                               <input id="cc-cd" name="competencia_clave" value="CD" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-cd" class="ml-2 block text-sm text-gray-900">CD - Competencia digital</label>
+                            </div>
+                            <div class="flex items-center">
+                               <input id="cc-cpsaa" name="competencia_clave" value="CPSAA" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-cpsaa" class="ml-2 block text-sm text-gray-900">CPSAA - Competencia personal, social y de aprender a aprender</label>
+                            </div>
+                             <div class="flex items-center">
+                               <input id="cc-cc" name="competencia_clave" value="CC" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-cc" class="ml-2 block text-sm text-gray-900">CC - Competencia ciudadana</label>
+                            </div>
+                             <div class="flex items-center">
+                               <input id="cc-ce" name="competencia_clave" value="CE" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-ce" class="ml-2 block text-sm text-gray-900">CE - Competencia emprendedora</label>
+                            </div>
+                             <div class="flex items-center">
+                               <input id="cc-ccec" name="competencia_clave" value="CCEC" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="cc-ccec" class="ml-2 block text-sm text-gray-900">CCEC - Competencia en conciencia y expresión culturales</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded p-4">
+                        <h3 class="font-semibold text-lg mb-3 text-gray-700">Competencias Específicas (Materia/Curso)</h3>
+                        <p class="text-sm text-gray-500 mb-3">Aquí aparecerán (más adelante) las CCEE correspondientes a la materia y curso seleccionados en el Paso 1. Por ahora, ejemplos:</p>
+                        <div class="space-y-2">
+                             <div class="flex items-center">
+                               <input id="ce-1" name="competencia_especifica" value="CE1" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="ce-1" class="ml-2 block text-sm text-gray-900">CE.1 - Ejemplo competencia específica 1...</label>
+                             </div>
+                              <div class="flex items-center">
+                               <input id="ce-2" name="competencia_especifica" value="CE2" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                               <label for="ce-2" class="ml-2 block text-sm text-gray-900">CE.2 - Ejemplo competencia específica 2...</label>
+                             </div>
+                             </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="flex justify-between mt-8 pt-6 border-t border-gray-200">
+                <button id="btn-prev" type="button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"> Anterior </button>
+                <button id="btn-next" type="button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"> Siguiente </button>
+            </div>
+        </main>
+        <footer class="mt-8 py-4 text-center text-gray-500 text-sm bg-gray-200">© 2025 - Generador SA</footer>
+    </div>
+     <script src="/js/navigation.js" defer></script>
+</body>
+</html>
